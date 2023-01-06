@@ -14,7 +14,7 @@ class CapuletEngine(Engine):
         self.current_mileage = current_mileage
 
     def needs_service(self):
-        service_interval = 1000  # define the number of miles between services for Capulet engines
+        service_interval = 30000  # define the number of miles between services for Capulet engines
         miles_since_last_service = self.current_mileage - self.last_service_mileage
         return miles_since_last_service >= service_interval
 
@@ -24,7 +24,7 @@ class WilloughbyEngine(Engine):
         self.current_mileage = current_mileage
 
     def needs_service(self):
-        service_interval = 5000  # define the number of miles between services for Willoughby engines
+        service_interval = 60000  # define the number of miles between services for Willoughby engines
         miles_since_last_service = self.current_mileage - self.last_service_mileage
         return miles_since_last_service >= service_interval
 
